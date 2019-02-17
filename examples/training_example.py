@@ -5,7 +5,7 @@ import argparse
 import os
 
 from anago.utils import load_data_and_labels
-from anago.models import BiLSTMCRF
+from anago.models import BiLSTMCRF, save_model
 from anago.preprocessing import IndexTransformer
 from anago.trainer import Trainer
 
@@ -38,7 +38,9 @@ def main(args):
     trainer.train(x_train, y_train, x_valid, y_valid)
 
     print('Saving the model...')
-    model.save(args.weights_file, args.params_file)
+    # model.save_model(args.weights_file, args.params_file)
+    # Save the model.
+    save_model(model, args.weights_file, args.params_file)
     p.save(args.preprocessor_file)
 
 
@@ -47,8 +49,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Training a model')
     parser.add_argument('--train_data', default=os.path.join(DATA_DIR, 'train.txt'), help='training data')
     parser.add_argument('--valid_data', default=os.path.join(DATA_DIR, 'valid.txt'), help='validation data')
-    parser.add_argument('--weights_file', default='weights.h5', help='weights file')
+    parser.add_argument('--weights_file', default='model_weights.h5', help='weights file')
     parser.add_argument('--params_file', default='params.json', help='parameter file')
+    parser.add_argument('--preprocessor_file', default='preprocessor.json')
     # Training parameters
     parser.add_argument('--loss', default='categorical_crossentropy', help='loss')
     parser.add_argument('--optimizer', default='adam', help='optimizer')

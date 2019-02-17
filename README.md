@@ -1,3 +1,8 @@
+# Fidex Version by CK
+
+- requirement.txt : fixed dependency version
+- Tagger.py : fixed graph non threadsafe 
+
 # anaGo
 
 **anaGo** is a Python library for sequence labeling(NER, PoS Tagging,...), implemented in Keras.

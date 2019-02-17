@@ -47,12 +47,14 @@ def main(args):
 
     print('Saving the model...')
     model.save(args.weights_file, args.params_file)
-    # p.save(args.preprocessor_file)
+    p.save(args.preprocessor_file)
 
 
 if __name__ == '__main__':
     DATA_DIR = os.path.join(os.path.dirname(__file__), '../data/conll2003/en/ner')
-    EMBEDDING_PATH = os.path.join(os.path.dirname(__file__), '../data/glove.6B/glove.6B.100d.txt')
+    # EMBEDDING_PATH = os.path.join(os.path.dirname(__file__), '../data/glove.6B/glove.6B.100d.txt')
+    EMBEDDING_PATH = 'C:/Users/CK/PycharmProjects/untitled/anago-master/data/glove.6B/glove.6B.100d.txt'
+    print(EMBEDDING_PATH)
     parser = argparse.ArgumentParser(description='Training a model')
     parser.add_argument('--train_data', default=os.path.join(DATA_DIR, 'train.txt'), help='training data')
     parser.add_argument('--valid_data', default=os.path.join(DATA_DIR, 'valid.txt'), help='validation data')

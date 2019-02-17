@@ -1,0 +1,107 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BiLSTMCRF	models.py	/^class BiLSTMCRF(object):$/;"	c
+CRF	layers.py	/^class CRF(Layer):$/;"	c
+ELMoTransformer	preprocessing.py	/^class ELMoTransformer(IndexTransformer):$/;"	c
+ELModel	models.py	/^class ELModel(object):$/;"	c
+F1score	callbacks.py	/^class F1score(Callback):$/;"	c
+IndexTransformer	preprocessing.py	/^class IndexTransformer(BaseEstimator, TransformerMixin):$/;"	c
+NERSequence	utils.py	/^class NERSequence(Sequence):$/;"	c
+Sequence	wrapper.py	/^class Sequence(object):$/;"	c
+Tagger	tagger.py	/^class Tagger(object):$/;"	c
+Trainer	trainer.py	/^class Trainer(object):$/;"	c
+Vocabulary	utils.py	/^class Vocabulary(object):$/;"	c
+__getitem__	utils.py	/^    def __getitem__(self, idx):$/;"	m	class:NERSequence	file:
+__init__	callbacks.py	/^    def __init__(self, seq, preprocessor=None):$/;"	m	class:F1score
+__init__	layers.py	/^    def __init__(self, units,$/;"	m	class:CRF
+__init__	models.py	/^    def __init__(self,$/;"	m	class:BiLSTMCRF
+__init__	models.py	/^    def __init__(self,$/;"	m	class:ELModel
+__init__	preprocessing.py	/^    def __init__(self, lower=True, num_norm=True,$/;"	m	class:ELMoTransformer
+__init__	preprocessing.py	/^    def __init__(self, lower=True, num_norm=True,$/;"	m	class:IndexTransformer
+__init__	tagger.py	/^    def __init__(self, model, preprocessor, tokenizer=str.split):$/;"	m	class:Tagger
+__init__	trainer.py	/^    def __init__(self, model, preprocessor=None):$/;"	m	class:Trainer
+__init__	utils.py	/^    def __init__(self, max_size=None, lower=True, unk_token=True, specials=('<pad>',)):$/;"	m	class:Vocabulary
+__init__	utils.py	/^    def __init__(self, x, y, batch_size=1, preprocess=None):$/;"	m	class:NERSequence
+__init__	wrapper.py	/^    def __init__(self,$/;"	m	class:Sequence
+__len__	utils.py	/^    def __len__(self):$/;"	m	class:NERSequence	file:
+__len__	utils.py	/^    def __len__(self):$/;"	m	class:Vocabulary	file:
+_build_response	tagger.py	/^    def _build_response(self, sent, tags, prob):$/;"	m	class:Tagger
+_get_accuracy	layers.py	/^    def _get_accuracy(y_true, y_pred, mask, sparse_target=False):$/;"	m	class:CRF
+_get_prob	tagger.py	/^    def _get_prob(self, pred):$/;"	m	class:Tagger
+_get_tags	tagger.py	/^    def _get_tags(self, pred):$/;"	m	class:Tagger
+_step	layers.py	/^        def _step(input_energy_i, states):$/;"	f	function:CRF.recursion
+acc	layers.py	/^        def acc(y_true, y_pred):$/;"	f	function:CRF.marginal_acc
+acc	layers.py	/^        def acc(y_true, y_pred):$/;"	f	function:CRF.viterbi_acc
+accuracy	layers.py	/^    def accuracy(self):$/;"	m	class:CRF
+add_boundary_energy	layers.py	/^    def add_boundary_energy(self, energy, mask, start, end):$/;"	m	class:CRF
+add_documents	utils.py	/^    def add_documents(self, docs):$/;"	m	class:Vocabulary
+add_token	utils.py	/^    def add_token(self, token):$/;"	m	class:Vocabulary
+analyze	tagger.py	/^    def analyze(self, text):$/;"	m	class:Tagger
+analyze	wrapper.py	/^    def analyze(self, text, tokenizer=str.split):$/;"	m	class:Sequence
+backward_recursion	layers.py	/^    def backward_recursion(self, input_energy, **kwargs):$/;"	m	class:CRF
+build	layers.py	/^    def build(self, input_shape):$/;"	m	class:CRF
+build	models.py	/^    def build(self):$/;"	m	class:BiLSTMCRF
+build	models.py	/^    def build(self):$/;"	m	class:ELModel
+build	utils.py	/^    def build(self):$/;"	m	class:Vocabulary
+call	layers.py	/^    def call(self, X, mask=None):$/;"	m	class:CRF
+char_vocab_size	preprocessing.py	/^    def char_vocab_size(self):$/;"	m	class:IndexTransformer
+compute_mask	layers.py	/^    def compute_mask(self, input, mask=None):$/;"	m	class:CRF
+compute_output_shape	layers.py	/^    def compute_output_shape(self, input_shape):$/;"	m	class:CRF
+doc2id	utils.py	/^    def doc2id(self, doc):$/;"	m	class:Vocabulary
+download	utils.py	/^def download(url):$/;"	f
+filter_embeddings	utils.py	/^def filter_embeddings(embeddings, vocab, dim):$/;"	f
+find_path	layers.py	/^        def find_path(argmin_table, best_idx):$/;"	f	function:CRF.viterbi_decoding
+fit	preprocessing.py	/^    def fit(self, X, y):$/;"	m	class:IndexTransformer
+fit	wrapper.py	/^    def fit(self, x_train, y_train, x_valid=None, y_valid=None,$/;"	m	class:Sequence
+fit_transform	preprocessing.py	/^    def fit_transform(self, X, y=None, **params):$/;"	m	class:IndexTransformer
+forward_recursion	layers.py	/^    def forward_recursion(self, input_energy, **kwargs):$/;"	m	class:CRF
+gather_each_row	layers.py	/^        def gather_each_row(params, indices):$/;"	f	function:CRF.viterbi_decoding
+get_config	layers.py	/^    def get_config(self):$/;"	m	class:CRF
+get_energy	layers.py	/^    def get_energy(self, y_true, input_energy, mask):$/;"	m	class:CRF
+get_lengths	callbacks.py	/^    def get_lengths(self, y_true):$/;"	m	class:F1score
+get_log_normalization_constant	layers.py	/^    def get_log_normalization_constant(self, input_energy, mask, **kwargs):$/;"	m	class:CRF
+get_marginal_prob	layers.py	/^    def get_marginal_prob(self, X, mask=None):$/;"	m	class:CRF
+get_negative_log_likelihood	layers.py	/^    def get_negative_log_likelihood(self, y_true, X, mask):$/;"	m	class:CRF
+id2doc	utils.py	/^    def id2doc(self, ids):$/;"	m	class:Vocabulary
+id_to_token	utils.py	/^    def id_to_token(self, idx):$/;"	m	class:Vocabulary
+inverse_transform	preprocessing.py	/^    def inverse_transform(self, y, lengths=None):$/;"	m	class:IndexTransformer
+label_size	preprocessing.py	/^    def label_size(self):$/;"	m	class:IndexTransformer
+load	preprocessing.py	/^    def load(cls, file_path):$/;"	m	class:IndexTransformer
+load	wrapper.py	/^    def load(cls, weights_file, params_file, preprocessor_file):$/;"	m	class:Sequence
+load_data_and_labels	utils.py	/^def load_data_and_labels(filename, encoding='utf-8'):$/;"	f
+load_glove	utils.py	/^def load_glove(file):$/;"	f
+load_model	models.py	/^def load_model(weights_file, params_file):$/;"	f
+loss	layers.py	/^            def loss(y_true, y_pred):$/;"	f	function:CRF.loss_function
+loss_function	layers.py	/^    def loss_function(self):$/;"	m	class:CRF
+marginal_acc	layers.py	/^    def marginal_acc(self):$/;"	m	class:CRF
+normalize_number	preprocessing.py	/^def normalize_number(text):$/;"	f
+on_epoch_end	callbacks.py	/^    def on_epoch_end(self, epoch, logs={}):$/;"	m	class:F1score
+options_file	preprocessing.py	/^options_file = 'https:\/\/s3-us-west-2.amazonaws.com\/allennlp\/models\/elmo\/2x4096_512_2048cnn_2xhighway\/elmo_2x4096_512_2048cnn_2xhighway_options.json'$/;"	v
+pad_nested_sequences	preprocessing.py	/^def pad_nested_sequences(sequences, dtype='int32'):$/;"	f
+predict	tagger.py	/^    def predict(self, text):$/;"	m	class:Tagger
+predict	wrapper.py	/^    def predict(self, x_test):$/;"	m	class:Sequence
+predict_proba	tagger.py	/^    def predict_proba(self, text):$/;"	m	class:Tagger
+process_token	utils.py	/^    def process_token(self, token):$/;"	m	class:Vocabulary
+recursion	layers.py	/^    def recursion(self, input_energy, mask=None, go_backwards=False, return_sequences=True, return_logZ=True, input_length=None):$/;"	m	class:CRF
+reverse_vocab	utils.py	/^    def reverse_vocab(self):$/;"	m	class:Vocabulary
+save	preprocessing.py	/^    def save(self, file_path):$/;"	m	class:IndexTransformer
+save	wrapper.py	/^    def save(self, weights_file, params_file, preprocessor_file):$/;"	m	class:Sequence
+save_model	models.py	/^def save_model(model, weights_file, params_file):$/;"	f
+score	wrapper.py	/^    def score(self, x_test, y_test):$/;"	m	class:Sequence
+shift_left	layers.py	/^    def shift_left(x, offset=1):$/;"	m	class:CRF
+shift_right	layers.py	/^    def shift_right(x, offset=1):$/;"	m	class:CRF
+softmaxNd	layers.py	/^    def softmaxNd(x, axis=-1):$/;"	m	class:CRF
+step	layers.py	/^    def step(self, input_energy_t, states, return_logZ=True):$/;"	m	class:CRF
+token_to_id	utils.py	/^    def token_to_id(self, token):$/;"	m	class:Vocabulary
+train	trainer.py	/^    def train(self, x_train, y_train, x_valid=None, y_valid=None,$/;"	m	class:Trainer
+transform	preprocessing.py	/^    def transform(self, X, y=None):$/;"	m	class:ELMoTransformer
+transform	preprocessing.py	/^    def transform(self, X, y=None):$/;"	m	class:IndexTransformer
+viterbi_acc	layers.py	/^    def viterbi_acc(self):$/;"	m	class:CRF
+viterbi_decoding	layers.py	/^    def viterbi_decoding(self, X, mask=None):$/;"	m	class:CRF
+vocab	utils.py	/^    def vocab(self):$/;"	m	class:Vocabulary
+weight_file	preprocessing.py	/^weight_file = 'https:\/\/s3-us-west-2.amazonaws.com\/allennlp\/models\/elmo\/2x4096_512_2048cnn_2xhighway\/elmo_2x4096_512_2048cnn_2xhighway_weights.hdf5'$/;"	v
+word_vocab_size	preprocessing.py	/^    def word_vocab_size(self):$/;"	m	class:IndexTransformer

@@ -2,6 +2,7 @@
 Model API.
 """
 import numpy as np
+import tensorflow as tf
 from seqeval.metrics.sequence_labeling import get_entities
 
 
@@ -18,6 +19,7 @@ class Tagger(object):
         self.model = model
         self.preprocessor = preprocessor
         self.tokenizer = tokenizer
+        self.graph = tf.get_default_graph()
 
     def predict_proba(self, text):
         """Probability estimates.
@@ -33,13 +35,13 @@ class Tagger(object):
             Returns the probability of the word for each class in the model,
         """
         assert isinstance(text, str)
-
         words = self.tokenizer(text)
-        X = self.preprocessor.transform([words])
-        y = self.model.predict(X)
-        y = y[0]  # reduce batch dimension.
-
-        return y
+        with self.graph.as_default():
+            X = self.preprocessor.transform([words])
+            y = self.model.predict(X)
+            y = y[0]  # reduce batch dimension.
+            return y
+        return None
 
     def _get_prob(self, pred):
         prob = np.max(pred, -1)
@@ -120,7 +122,6 @@ class Tagger(object):
         tags = self._get_tags(pred)
         prob = self._get_prob(pred)
         res = self._build_response(text, tags, prob)
-
         return res
 
     def predict(self, text):
